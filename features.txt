@@ -1,0 +1,8 @@
+a -> V
+i -> V
+u -> V
+aa -> V̄
+ii -> V̄
+uu -> V̄
+w -> Y
+y -> Y
