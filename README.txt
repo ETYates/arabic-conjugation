@@ -8,4 +8,5 @@ TO DOs:
 -Implement morphological rules for weak verbs. 
 -Verify generated forms against pre-annotated data.
 
-
+D. Bargelli and J. Lambek, "A Computational Approach to Arabic Conjugation"
+Linguistic Analysis 31, 1-2 (2001): 110-131.
