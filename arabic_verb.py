@@ -17,6 +17,17 @@ class Radical:
         self.first, self.middle, self.last = fundamentals[:3]
         self.vowel1, self.vowel2 = fundamentals[3:5]
 
+class FeatureNames:
+    # Converts single letter variable names into Arabic grammatical terminology.
+    int2mood = ['past', 'indicative', 'subjunctive', 'jussive']
+    int2pattern = ['fa`ala', 'fa``ala', 'fā`ala', 
+                   'ʾaf`ala', 'tafa``ala', 'tafā`ala',
+                   'infa`ala', 'ifta`ala', 'if`alla',
+                   'istafʿala']
+    # These are the names for each pattern in Arabic grammatical terminology.
+    # They are based off the verb radical (f ` l) in each respective pattern.
+    int2voice = ['active', 'passive']
+
 class Conjugation:
     # Single letter variable names are used for easy reference to variables
     # in the original paper.
@@ -34,17 +45,17 @@ class Conjugation:
     q_prime = defaultdict(lambda: '') # Past suffixes.
     s = defaultdict(lambda: '') # Non-past patterns.
     s_prime = defaultdict(lambda: '') # Past patterns.
-    r = defaultdict(lambda: '0') # Final desinences.
+    r = defaultdict(lambda: '') # Final desinences.
     radical = None # Original three consonant semitic radical.
 
     def __init__(self, fundamentals):
         self.radical = Radical(fundamentals)
-        self.load_morphemes('prefixes.txt', self.p)
-        self.load_morphemes('suffixes.txt', self.q)
-        self.load_morphemes('suffixes_prime.txt', self.q_prime)
-        self.load_patterns('forms.txt', self.s)
-        self.load_patterns('forms_prime.txt', self.s_prime)
-        self.load_finals('finals.txt', self.r)
+        self.load_morphemes('prefixes', self.p)
+        self.load_morphemes('suffixes', self.q)
+        self.load_morphemes('suffixes_prime', self.q_prime)
+        self.load_patterns('forms', self.s)
+        self.load_patterns('forms_prime', self.s_prime)
+        self.load_finals('finals', self.r)
 
     # For reading in prefixes and suffixes from text documents.
     def load_morphemes(self, filename, dictionary):
@@ -85,12 +96,11 @@ class Conjugation:
                     result, context = rules[n].split('after')
                     result = result.strip()
                     context = context.strip()
-                    if dictionary[key] == '0':
+                    if dictionary[key] == '':
                         dictionary[key] = defaultdict(lambda: '0')
                         dictionary[key][context] = result
                     else:
                         dictionary[key][context] = result
-        pp.pprint(dict(dictionary))
 
     # Fills abstract patterns with consonants and vowels from verb radical.
     def insert_pattern(self, l, k, j):
@@ -98,6 +108,8 @@ class Conjugation:
             pattern = self.s_prime[l][k]
         else:
             pattern = self.s[l][k]
+        if pattern == 'EMPTY':
+            return pattern
         pattern = pattern.replace('F', self.radical.first)
         pattern = pattern.replace('M', self.radical.middle)
         pattern = pattern.replace('L', self.radical.last)
@@ -108,6 +120,8 @@ class Conjugation:
     # Main conjugation formula.
     def conjugate(self, i, j, k, l):
         pattern = self.insert_pattern(l, k, j)
+        if pattern == 'EMPTY':
+            return 'EMPTY'
         if j == 0:
             suffix = self.q_prime[i]
             verb = pattern + suffix
@@ -123,26 +137,31 @@ class Conjugation:
     # Determines which non-past final desinence to choose, based on
     # phonological context.
     def determine_final(self, form, j):
+        if j == 3:
+            return ''
         final = form[-2:]
         if final in self.r[j]:
             return self.r[j][final]
         else:
-            if final[-1:] not in 'aiu':
+            if type(self.r[j]) == str:
+                return self.r[j]
+            else:
                 return self.r[j]['C']
-            else: 
-                return 'ERROR'
 
 
 def test():
+    names = FeatureNames()
     conj = Conjugation('qtlua')
     conj.insert_pattern(0, 1, 0)
     conj.insert_pattern(0, 1, 1)
-    for n in range(conj.l):
-        for o in range(conj.j):
-            for p in range(conj.k):
-                for q in conj.i:
-                    place = f"l={n}, j={o}, k={p}, i={q}"
-                    # print(place)
-                    print(conj.conjugate(q, o, 0, n))
-
+    for pattern in range(conj.k+1):
+        for mood in range(conj.j+1):
+            for voice in range(conj.l+1):
+                for person in conj.i:
+                    pass
+                    print(names.int2pattern[pattern], end=' ')
+                    print(names.int2voice[voice], end=' ')
+                    print(names.int2mood[mood], end=' ')
+                    print(person, end=' ')
+                    print(conj.conjugate(person, mood, pattern, voice))
 test()
