@@ -1,0 +1,100 @@
+['past', 'indicative', 'subjunctive', 'jussive']
+0 fa`ala active past 1 qataltu
+0 fa`ala active past 2m qatalta
+0 fa`ala active past 2f qatalti
+0 fa`ala active past 3m qatala
+0 fa`ala active past 3f qatalat
+0 fa`ala active past 4 qatalnaa
+0 fa`ala active past 5m qataltum
+0 fa`ala active past 5f qataltuma
+0 fa`ala active past 5d qataltumaa
+0 fa`ala active past 6m qataluu
+0 fa`ala active past 6f qatalna
+0 fa`ala active past 6dm qatalaa
+0 fa`ala active past 6df qataltaa
+1 fa`ala passive past 1 qutiltu
+1 fa`ala passive past 2m qutilta
+1 fa`ala passive past 2f qutilti
+1 fa`ala passive past 3m qutila
+1 fa`ala passive past 3f qutilat
+1 fa`ala passive past 4 qutilnaa
+1 fa`ala passive past 5m qutiltum
+1 fa`ala passive past 5f qutiltuma
+1 fa`ala passive past 5d qutiltumaa
+1 fa`ala passive past 6m qutiluu
+1 fa`ala passive past 6f qutilna
+1 fa`ala passive past 6dm qutilaa
+1 fa`ala passive past 6df qutiltaa
+0 fa`ala active indicative 1 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+'aqtulu
+0 fa`ala active indicative 2m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+taqtulu
+0 fa`ala active indicative 2f taqtuliina
+0 fa`ala active indicative 3m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+yaqtulu
+0 fa`ala active indicative 3f defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+taqtulu
+0 fa`ala active indicative 4 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+naqtulu
+0 fa`ala active indicative 5m taqtuluuna
+0 fa`ala active indicative 5f taqtulna
+0 fa`ala active indicative 5d taqtulaani
+0 fa`ala active indicative 6m yaqtuluuna
+0 fa`ala active indicative 6f yaqtulna
+0 fa`ala active indicative 6dm yaqtulaani
+0 fa`ala active indicative 6df taqtulaani
+1 fa`ala passive indicative 1 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+'uqtalu
+1 fa`ala passive indicative 2m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+tuqtalu
+1 fa`ala passive indicative 2f tuqtaliina
+1 fa`ala passive indicative 3m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+yuqtalu
+1 fa`ala passive indicative 3f defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+tuqtalu
+1 fa`ala passive indicative 4 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+nuqtalu
+1 fa`ala passive indicative 5m tuqtaluuna
+1 fa`ala passive indicative 5f tuqtalna
+1 fa`ala passive indicative 5d tuqtalaani
+1 fa`ala passive indicative 6m yuqtaluuna
+1 fa`ala passive indicative 6f yuqtalna
+1 fa`ala passive indicative 6dm yuqtalaani
+1 fa`ala passive indicative 6df tuqtalaani
+0 fa`ala active subjunctive 1 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+'aqtula
+0 fa`ala active subjunctive 2m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+taqtula
+0 fa`ala active subjunctive 2f taqtulii
+0 fa`ala active subjunctive 3m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+yaqtula
+0 fa`ala active subjunctive 3f defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+taqtula
+0 fa`ala active subjunctive 4 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+naqtula
+0 fa`ala active subjunctive 5m taqtuluu
+0 fa`ala active subjunctive 5f taqtulna
+0 fa`ala active subjunctive 5d taqtulaa
+0 fa`ala active subjunctive 6m yaqtuluu
+0 fa`ala active subjunctive 6f yaqtulna
+0 fa`ala active subjunctive 6dm yaqtulaa
+0 fa`ala active subjunctive 6df taqtulaa
+1 fa`ala passive subjunctive 1 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+'uqtala
+1 fa`ala passive subjunctive 2m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+tuqtala
+1 fa`ala passive subjunctive 2f tuqtalii
+1 fa`ala passive subjunctive 3m defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+yuqtala
+1 fa`ala passive subjunctive 3f defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+tuqtala
+1 fa`ala passive subjunctive 4 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'})})
+nuqtala
+1 fa`ala passive subjunctive 5m tuqtaluu
+1 fa`ala passive subjunctive 5f tuqtalna
+1 fa`ala passive subjunctive 5d tuqtalaa
+1 fa`ala passive subjunctive 6m yuqtaluu
+1 fa`ala passive subjunctive 6f yuqtalna
+1 fa`ala passive subjunctive 6dm yuqtalaa
+1 fa`ala passive subjunctive 6df tuqtalaa
+0 fa`ala active jussive 1 defaultdict(<function Conjugation.<lambda> at 0x7fa9518cadc0>, {1: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb4c0>, {'aa': 'ni', 'ii': 'na', 'uu': 'na', 'na': '0', 'C': 'u', 'Y': 'u'}), 2: defaultdict(<function Conjugation.load_finals.<locals>.<lambda> at 0x7fa9518cb550>, {'ii': '0', 'uu': '0', 'aa': '0', 'na': '0', 'C': 'a', 'Y': 'a'}), 3: '0'})
