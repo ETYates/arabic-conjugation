@@ -1,14 +1,33 @@
 from collections import defaultdict
-import pprint
-pp = pprint.PrettyPrinter(indent=4)
-
 
 class Radical:
-    
-    # Model of the semantic three letter system in semitic languages. In the
-    # case of Arabic, also includes two characteristic vowels.
-
+    """
+    This class represents the semitic triconsonantal radical system of morphology in Arabic.
+    ...
+    Attributes
+    ----------
+    first : char
+        first consonant in radical
+    middle : char
+        middle consonant in radical
+    last : char
+        last consonant in radical
+    vowel1 : char
+        first characteristic vowel for verb
+    vowel2 : char
+        second characteristic vowel for verb
+    """
     def __init__(self, fundamentals):
+        """
+        Populates radical attributes with respective character values.
+
+        @param
+        ------
+            fundamentals : str
+                five characters representing first, middle, last consonants,
+                and the two characteristic vowels, in that order.
+
+        """
         bound = 3
         fundamentals = list(fundamentals)
         self.first, self.middle, self.last = fundamentals[:bound]
@@ -16,7 +35,19 @@ class Radical:
 
 
 class FeatureNames:
-    # Converts single letter variable names into Arabic grammatical terminology.
+    """
+    Converts single letter variable names into Arabic grammatical terminology.
+    ...
+    Attributes
+    ----------
+    int2mood : list 
+        list containing names for each grammatical mood
+    int2pattern : list
+        list containing Arabic names for each morphological "pattern" in the 
+        semitic system of conjugation.
+    int2voice : list 
+        list containing names for each grammatical voice-active and passive.
+    """
     int2mood = ['past', 'indicative', 'subjunctive', 'jussive']
     int2pattern = ['fa`ala',   'fa``ala',   'fā`ala', 
                    'ʾaf`ala',  'tafa``ala', 'tafā`ala',
@@ -28,14 +59,65 @@ class FeatureNames:
 
 
 class Conjugation:
-    # Single letter variable names are used for easy reference to variables
-    # in the original paper.
+    """
+    This class represents the core of the rule-based approach to Arabic
+    conjugation. It contains the variables used in the paper for counting and
+    identifying features, along with the matrices containing endings, prefixes,
+    and patterns. Single letter variable names are used for easy reference to
+    variables in the original paper.
+
+    Attributes
+    ----------
+    i : list
+        array containing person and number labels
+    j : int
+        number of grammatical moods
+    l : int
+        number of grammatical voices (0 = active, 1 = passive)
+    p : defaultdict
+        Dictionary containing prefixes accessed by their person and number
+        labels.
+    q : defaultdict
+        dictionary containing non-past suffixes
+    q_prime : defaultdict
+        dictionary containing past-tense suffixes
+    s : defaultdict
+        dictionary containing non-past conjugational patterns or "forms"
+    s_prime : defaultdict
+        dictionary containing past-tense conjugational patterns or "forms"
+    r : defaultdict
+        dictionary containing final endings for non-past forms
+    radical : Radical
+        instance of Radical class representing the abstract triconsonantal
+        radical
+
+    Methods
+    -------
+    split_and_strip(fundamentals) 
+        helper function to split string and remove whitespace
+    load_morphemes(filename, dictionary)
+        function to load prefix and suffix matrices from files and deposits
+        them in the respective dictionary
+    load_patterns(filename, dictionary)
+        function to load form/pattern matrices into dictionaries from
+        respective file
+    load_finals(filename, dictionary)
+        loads final non-past suffixes into dictionary from file
+    insert_pattern(l, k, j)
+        loads verb radical (consonants and vowels) into the selected templatic
+        form
+    conjugate(self, i, j, k, l)
+        main conjugation function--takes all morphological features and a verb
+        and produces the desired form
+    determine_final(self, form, j)
+        determines the final non-past desinence based on the phonological context
+    """
     i = ['1',  '2m', '2f', 
          '3m', '3f', '4', 
          '5m', '5f', '5d', 
          '6m', '6f', '6dm', 
          '6df']
-    j = 3                               # Four moods.
+    j = 3                               # Four grammatical moods.
     k = 9                               # Ten forms, or "patterns".
     l = 1                               # Two voices: active and passive.
     p = defaultdict(lambda: 't')        # Prefixes.
