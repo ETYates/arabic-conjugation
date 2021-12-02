@@ -26,7 +26,6 @@ class Radical:
             fundamentals : str
                 five characters representing first, middle, last consonants,
                 and the two characteristic vowels, in that order.
-
         """
         bound = 3
         fundamentals = list(fundamentals)
@@ -51,7 +50,7 @@ class FeatureNames:
     int2mood = ['past', 'indicative', 'subjunctive', 'jussive']
     int2pattern = ['fa`ala',   'fa``ala',   'fā`ala', 
                    'ʾaf`ala',  'tafa``ala', 'tafā`ala',
-                   'infa`ala', 'ifta`ala', 'if`alla',
+                   'infa`ala', 'ifta`ala',  'if`alla',
                    'istafʿala']
     # These are the names for each pattern in Arabic grammatical terminology.
     # They are based off the verb radical (f ` l) in each respective pattern.
@@ -129,6 +128,15 @@ class Conjugation:
     radical = None                      # Original three consonant semitic radical.
 
     def __init__(self, fundamentals):
+        """
+        Populates matrice values--loads values from files.
+        
+        @param
+        ------
+        fundamentals : str
+            The characters used to load the radical and fill in morphological
+            templates.
+        """
         self.radical = Radical(fundamentals)
         self.load_morphemes('data/prefixes', self.p)
         self.load_morphemes('data/suffixes', self.q)
@@ -138,20 +146,53 @@ class Conjugation:
         self.load_finals('data/finals', self.r)
 
     def split_and_strip(self, element, delimiter):
+        """
+        Helper function to split strings and strip whitespace in one step.
+
+        @param
+        ------
+        element : str
+            string containing delimited objects
+        delimiter : str
+            string containing delimiter for splitting element string
+
+        @return
+        -------
+        elements : list
+            list containing delimited substrings in element
+        """
         elements = element.split(delimiter)
         for n in range(len(elements)):
             elements[n] = elements[n].strip()
         return elements
 
-    # For reading in prefixes and suffixes from text documents.
     def load_morphemes(self, filename, dictionary):
+        """
+        For reading in prefixes and suffixes from text documents.
+
+        @param
+        ------
+        filename : str
+            name of file to be loaded
+        dictionary : defaultdict 
+            dictionary to which file information is saved
+        """
         with open(filename) as f:
             for line in f:
                 key, person = self.split_and_strip(line, '->') # MAKE THIS INTO A HELPER FUNCTION
                 dictionary[key] = person
 
-    # For reading the semitic stem forms/patterns from text documents.
     def load_patterns(self, filename, dictionary):
+        """
+        For reading the semitic stem forms/patterns from text documents.
+
+        @param
+        ------
+        filename : str
+            name of file to be loaded
+        dictionary : defaultdict 
+            dictionary to which file information is saved
+        """
         with open(filename) as f:
             for line in f:
                 keys, pattern = self.split_and_strip(line, '->')
@@ -163,10 +204,18 @@ class Conjugation:
                     dictionary[key1][key2] = pattern
                 else:
                     dictionary[key1][key2] = pattern
-        # pp.pprint(dict(dictionary))
 
-    # For loading final desinences for non-past forms.
     def load_finals(self, filename, dictionary):
+        """
+        For loading final desinences for non-past forms.
+
+        @param
+        ------
+        filename : str
+            name of file to be loaded
+        dictionary : defaultdict 
+            dictionary to which file information is saved
+        """
         with open(filename) as f:
             for line in f:
                 key, rules = self.split_and_strip(line, '->')
@@ -180,8 +229,25 @@ class Conjugation:
                     else:
                         dictionary[key][context] = result
 
-    # Fills abstract patterns with consonants and vowels from verb radical.
     def insert_pattern(self, l, k, j):
+        """
+        Fills abstract patterns with consonants and vowels from verb radical.
+
+        @param
+        ------
+        l : int
+            voice
+        k : int
+            pattern/form
+        j : int 
+            mood
+
+        @return 
+        -------
+        pattern : str
+            morphological 'pattern' or 'form' with radical consonants and vowels
+            substituted into the respective variables
+        """
         if j == 0:
             pattern = self.s_prime[l][k]
         else:
@@ -195,8 +261,25 @@ class Conjugation:
         pattern = pattern.replace('E', self.radical.vowel2)
         return pattern
        
-    # Main conjugation formula.
     def conjugate(self, i, j, k, l):
+        """
+        Main conjugation formula.
+
+        @param
+        ------
+        i : str
+            person/number
+        j : int
+            mood
+        k : int
+            pattern/form
+        l : int
+            voice
+
+        @return
+        -------
+        final verb form output
+        """
         pattern = self.insert_pattern(l, k, j)
         if pattern == 'EMPTY':
             return 'EMPTY'
@@ -212,9 +295,18 @@ class Conjugation:
         verb = verb.replace('0', '')
         return verb
 
-    # Determines which non-past final desinence to choose, based on
-    # phonological context.
     def determine_final(self, form, j):
+        """
+        Determines which non-past final desinence to choose, based on
+        phonological context.
+
+        @param
+        ------
+        form : str
+            morphological stem to be analyzed
+        j : int
+            morphological mood
+        """
         if j == 3:
             return ''
         final = form[-2:]
