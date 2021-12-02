@@ -292,7 +292,6 @@ class Conjugation:
             form = prefix + pattern + suffix
             final = self.determine_final(form, j)
             verb = form + final
-        verb = verb.replace('0', '')
         return verb
 
     def determine_final(self, form, j):
@@ -317,18 +316,3 @@ class Conjugation:
                 return self.r[j]
             else:
                 return self.r[j]['C']
-
-
-def test():
-    names = FeatureNames()
-    conj = Conjugation('qtlua')
-    for pattern in range(conj.k+1):
-        for mood in range(conj.j+1):
-            for voice in range(conj.l+1):
-                for person in conj.i:
-                    print(names.int2pattern[pattern], end=' ')
-                    print(names.int2voice[voice], end=' ')
-                    print(names.int2mood[mood], end=' ')
-                    print(person, end=' ')
-                    print(conj.conjugate(person, mood, pattern, voice))
-test()
