@@ -224,7 +224,7 @@ class Conjugation:
                 for n in range(len(rules)):
                     result, context = self.split_and_strip(rules[n], 'after')
                     if dictionary[key] == '':
-                        dictionary[key] = defaultdict(lambda: '0')
+                        dictionary[key] = defaultdict(lambda: '')
                         dictionary[key][context] = result
                     else:
                         dictionary[key][context] = result
@@ -292,6 +292,7 @@ class Conjugation:
             form = prefix + pattern + suffix
             final = self.determine_final(form, j)
             verb = form + final
+            verb = verb.replace('0', '')
         return verb
 
     def determine_final(self, form, j):
