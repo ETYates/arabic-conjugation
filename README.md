@@ -23,6 +23,29 @@ fa`ala active past 6dm qatalaa
 fa`ala active past 6df qataltaa
 ```
 
+This project is a proof of concept. Many languages are resource-poor and
+are not conducive towards the quick creation of annotated corpra (i.e. 
+minority languages, dead languages). Morphology is important to Natural
+Language Processing because many languages, unlike English and Chinese, 
+hold critical semantic and structural information within the word level
+(at the morpheme level). Therefore, morphological annotation for a
+a language with complex morphology (such as Arabic and other Semitic languages)
+is crucial. 
+
+The mathematician Joachim Lambek wrote multiple mathematical analyses of
+conjugational systems in various languages (including French, Latin, Hebrew,
+Arabic, and Turkish, among others). These analyses heavily utilized rewrite 
+systems. This implementation of Lambek and Bargelli's analysis utilizes
+templatic data in which letters are rewritten and morphemes concatenated.
+
+In the context of Arabic, the program (very basically) selects a template 
+```
+FaMEL
+``` 
+with F, M, L respectively representing the first, middle, and last radicals
+in the templatic semitic root system (usually consisting of three
+consonants). 
+
 TO DOs:
 - Implement phonological rules for (t), and section symbol.
 - Implement morphological rules for weak verbs. 
